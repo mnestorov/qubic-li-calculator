@@ -7,7 +7,7 @@
 source venv/bin/activate
 
 # Run Qubic calculator script
-python main.py
+python3 main.py
 
 # Deactivate the virtual environment (optional)
 deactivate
