@@ -24,14 +24,12 @@ Before you start, ensure you have the following:
 git clone https://github.com/mnestorov/qubic-li-calculator.git
 cd qubic-li-calculator
 ```
-### Step 2: Set Up Python Environment
+### Step 2: Making start.sh Executable
 
-Create and activate a Python virtual environment:
+Ensure start.sh is executable by running:
 
 ```shell
-python3 -m venv venv
-source venv/bin/activate  # On Unix/macOS
-.\venv\Scripts\activate   # On Windows
+chmod +x start.sh
 ```
 
 ### Step 3: Install Dependencies
@@ -40,6 +38,12 @@ Install the required Python packages:
 
 ```shell
 pip install -r requirements.txt
+```
+
+All required Python packages (like requests and pycoingecko) need to be installed globally:
+
+```shell
+python3 -m pip install requests pycoingecko
 ```
 
 ## Usage
