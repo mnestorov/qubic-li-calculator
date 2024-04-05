@@ -1,0 +1,2 @@
+requests==2.25.1
+pycoingecko==2.2.0
