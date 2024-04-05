@@ -34,16 +34,10 @@ chmod +x start.sh
 
 ### Step 3: Install Dependencies
 
-Install the required Python packages:
+All required Python packages (like `requests` and `pycoingecko`) need to be installed globally:
 
 ```shell
-pip install -r requirements.txt
-```
-
-All required Python packages (like requests and pycoingecko) need to be installed globally:
-
-```shell
-python3 -m pip install requests pycoingecko
+pip3 install requests pycoingecko
 ```
 
 ## Usage
