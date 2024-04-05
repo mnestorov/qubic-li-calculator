@@ -8,8 +8,8 @@ def clear_screen():
     """Clears the console screen."""
     os.system('cls' if os.name == 'nt' else 'clear')
 
-def make_green(text):
-    return f"\033[32m{text}\033[0m"
+def make_light_green(text):
+    return f"\033[38;5;154m{text}\033[0m"
     
 def make_light_yellow(text):
     return f"\033[38;5;227m{text}\033[0m"
@@ -52,23 +52,23 @@ def calculate_earnings(my_hashrate, network_stat, qubic_price):
 
     print('\n\nCurrent Epoch Info')
     print('---')
-    print(f'Current epoch: {make_light_yellow(f"{epoch_number}")}')
-    print(f'Epoch start UTC: {make_light_blue(f"{current_epoch_begin}")}')
-    print(f'Epoch end UTC: {make_light_blue(f"{current_epoch_end}")}')
-    print(f'Epoch progress: {make_light_blue(f"{100 * current_epoch_progress:.1f}%")}\n')
+    print(f'Current epoch: {make_light_blue(f"{epoch_number}")}')
+    print(f'Epoch start UTC: {make_light_yellow(f"{current_epoch_begin}")}')
+    print(f'Epoch end UTC: {make_light_yellow(f"{current_epoch_end}")}')
+    print(f'Epoch progress: {make_light_yellow(f"{100 * current_epoch_progress:.1f}%")}\n')
     print('Network Info')
     print('---')
-    print(f'Estimated network hashrate: {make_light_yellow(f"{net_hashrate:,} it/s")}')
-    print(f'Average score: {make_light_blue(f"{net_avg_scores:.1f}")}')
-    print(f'Scores per hour: {make_light_blue(f"{net_sols_per_hour:.1f}")}\n')
+    print(f'Estimated network hashrate: {make_light_blue(f"{net_hashrate:,} it/s")}')
+    print(f'Average score: {make_light_yellow(f"{net_avg_scores:.1f}")}')
+    print(f'Scores per hour: {make_light_yellow(f"{net_sols_per_hour:.1f}")}\n')
     print('Income Estimations')
     print('---')
-    print(f'Active pool: {make_light_yellow("Fixed Reward 85%")}')
-    print(f'Qubic price: {make_light_blue(f"{qubic_price:.8f}$")}')
-    print(f'Estimated income per 1 it/s per day: {make_light_blue(f"{income_per_one_its:.4f}$")}\n')
-    print(f'Your estimated income per day: {make_green(f"{my_hashrate * income_per_one_its:.2f}$")}')
-    print(f'Estimated income per 1 sol: {make_green(f"{cur_sol_price:.2f}$")}')
-    print(f'Your estimated sols per day: {make_green(f"{24 * my_hashrate * net_sols_per_hour / net_hashrate:.1f}")}\n')
+    print(f'Active pool: {make_light_blue("Fixed Reward 85%")}')
+    print(f'Qubic price: {make_light_yellow(f"{qubic_price:.8f}$")}')
+    print(f'Estimated income per 1 it/s per day: {make_light_yellow(f"{income_per_one_its:.4f}$")}\n')
+    print(f'Your estimated income per day: {make_light_green(f"{my_hashrate * income_per_one_its:.2f}$")}')
+    print(f'Estimated income per 1 sol: {make_light_green(f"{cur_sol_price:.2f}$")}')
+    print(f'Your estimated sols per day: {make_light_green(f"{24 * my_hashrate * net_sols_per_hour / net_hashrate:.1f}")}\n')
     print('################################################################################')
     print('################################################################################\n\n')
 
@@ -77,6 +77,8 @@ def main():
     print('################################################################################')
     print('#####                                                                     ######')
     print('#####                      QUBIC-LI EARNINGS CALCULATOR                   ######')
+    print('#####                                  ---                                ######')
+    print('#####           https://github.com/mnestorov/qubic-li-calculator          ######')
     print('#####                                                                     ######')
     print('################################################################################\n')
     
