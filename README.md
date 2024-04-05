@@ -1,5 +1,7 @@
 # Qubic-Li Earnings Calculator
 
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+
 ## Overview
 The Qubic-Li Earnings Calculator is a Python-based tool designed to provide cryptocurrency miners with an estimation of their potential earnings from mining Qubic in [qubic-li](https://app.qubic.li/) pool. It calculates earnings based on the user's rig hashrate, considering current network statistics and Qubic's market price.
 
