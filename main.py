@@ -50,7 +50,7 @@ def calculate_earnings(my_hashrate, network_stat, qubic_price):
     income_per_one_its = pool_reward * qubic_price * 1000000000000 / net_hashrate / 7 / 1.06
     cur_sol_price = 1479289940 * pool_reward * current_epoch_progress * qubic_price / (net_avg_scores * 1.06)
 
-    print('\n\nCurrent Epoch Info')
+    print('\n\nEpoch Info')
     print('---')
     print(f'Current epoch: {make_light_blue(f"{epoch_number}")}')
     print(f'Epoch start UTC: {make_light_yellow(f"{current_epoch_begin}")}')
